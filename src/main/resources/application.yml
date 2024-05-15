@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:2022/postgres
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgre
+    hikari:
+      connection-test-query: select 1
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: false
