@@ -14,6 +14,10 @@ spring:
     properties:
       hibernate:
         format_sql: false
-springdoc:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: myApp
+
   swagger-ui:
     path: /swagger-ui.html
