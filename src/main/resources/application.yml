@@ -18,6 +18,10 @@ spring:
     bootstrap-servers: localhost:9092
     consumer:
       group-id: myApp
-
   swagger-ui:
     path: /swagger-ui.html
+  data:
+    redis:
+      host: localhost
+      password: eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
+      port: 6379
