@@ -79,6 +79,12 @@
 			<version>5.1.0</version>
 		</dependency>
 
+<!--		elastic search-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
