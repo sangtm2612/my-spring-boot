@@ -1,5 +1,7 @@
 package com.example.springbootsample.controller;
 
+import com.example.springbootsample.common.BaseResponse;
+import com.example.springbootsample.entities.User;
 import com.example.springbootsample.requests.UserRequestDto;
 import com.example.springbootsample.services.UserService;
 import lombok.RequiredArgsConstructor;
@@ -16,7 +18,7 @@ public class UserController {
 
     @GetMapping("/")
     public ResponseEntity<?> getUserByUsername(@RequestParam(required = false, value = "username") String username) {
-        return ResponseEntity.ok(userService.getUserByUsername(username));
+        return ResponseEntity.ok(new BaseResponse<>(userService.getUserByUsername(username)));
     }
 
     @SneakyThrows
