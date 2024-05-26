@@ -6,7 +6,7 @@ spring:
     url: jdbc:postgresql://localhost:2022/postgres
     driver-class-name: org.postgresql.Driver
     username: postgres
-    password: postgre
+    password: postgres
     hikari:
       connection-test-query: select 1
   jpa:

@@ -63,8 +63,21 @@ services:
     volumes:
       - cache:/data
 
+  db:
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - db:/var/lib/postgresql/data
+
 volumes:
   cache:
+    driver: local
+  db:
     driver: local
 
 networks:
